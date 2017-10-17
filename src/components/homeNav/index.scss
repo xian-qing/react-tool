@@ -1,0 +1,49 @@
+@function Rem($now) {
+  @return ($now / 75) + rem;
+}
+
+.HomeNav{
+  position: relative;
+    color: #fff;
+  .nav-btn-box{
+    font-size: Rem(30);
+    background: #2f0233;
+    padding-right: Rem(50);
+    .nav-btn{
+      float: left;
+      padding: Rem(18) 0;
+      line-height: Rem(30);
+      height: Rem(30);
+      width: 20%;
+      text-align: center;
+    }
+    .active-nav{
+      background: #fff;
+      color: #2f0233;
+    }
+  }
+  .nav-btn-box:after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .arrow{
+    position: absolute;
+    right: Rem(10);
+    top: Rem(20);
+    width: Rem(32);
+    transform: rotateZ(0);
+    transition: 0.1s;
+  }
+  .arrow-top{
+    transform: rotateZ(180deg);
+    transition: 0.1s;
+  }
+}
+.HomeNavTop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}

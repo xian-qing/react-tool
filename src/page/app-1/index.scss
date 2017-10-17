@@ -1,0 +1,93 @@
+*{
+ margin: 0;
+ padding: 0;
+}
+body{
+ background: white;
+}
+@function Rem($now) {
+ @return ($now / 75) + rem;
+}
+a{
+ text-decoration: none;
+ color: black;
+}
+.loading-gif{
+ width: Rem(400);
+ height: Rem(200);
+ background: url("../../image/loading1.gif") no-repeat;
+ background-size: contain;
+ background-position: center;
+ margin: 0 auto;
+ //display: none;
+}
+.loading-No{
+ font-size: Rem(20);
+ text-align: center;
+ color: #999;
+ line-height: Rem(100);
+}
+.marquee{
+ height: 25px;
+ font-size: Rem(24);
+ line-height: 25px;
+ padding: 0 Rem(30);
+ background: #fafafa;
+ overflow: hidden;
+ .marquee-list{
+  transform:translate(0,0px);
+  transition:transform 1s;
+  a{
+   display: block;
+   height: 25px;
+   overflow: hidden;
+  }
+ }
+}
+.course{
+ position: fixed;
+ height: Rem(116);
+ width: Rem(116);
+ background: url("../../image/study.png") no-repeat;
+ background-size: contain;
+ bottom: Rem(50);
+ right: Rem(30);
+}
+.timeNav{
+ height: Rem(55);
+ width: 100%;
+ background: #eee;
+ position: relative;
+ .icon-btn{
+  height: Rem(55);
+  width: Rem(55);
+  background: url("../../image/sj-icon.png") no-repeat;
+  background-size: 50%;
+  background-position: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+ }
+ .right-btn{
+  left: auto;
+  right: 0;
+  transform: rotateZ(180deg);
+ }
+ .nav{
+  width: 100%;
+  padding: 0 Rem(55);
+  line-height: Rem(55);
+  text-align: center;
+  .nav-btn{
+   font-size: Rem(20);
+   float: left;
+   width: 14%;
+  }
+  .two-text{
+   width: 10%;
+  }
+  .active{
+   color: #ff0059;
+  }
+ }
+}

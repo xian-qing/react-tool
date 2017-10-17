@@ -1,0 +1,118 @@
+@function Rem($now) {
+  @return ($now / 75) + rem;
+}
+.Header{
+  height: Rem(95);
+  background: #2f0233;
+  .back-icon{
+    height: Rem(45);
+    width: Rem(45);
+    background: url("../../image/activity/left-v.png") no-repeat;
+    background-size: contain;
+    float: left;
+    margin: Rem(25);
+    margin-left: Rem(40);
+  }
+  .header-text{
+    float: left;
+    height: Rem(95);
+    line-height: Rem(95);
+    color: white;
+    font-size: Rem(34);
+    span{
+      font-weight: bold;
+    }
+  }
+}
+
+.User{
+  height: Rem(75);
+  background: white;
+  >div{
+    float: left;
+    line-height: Rem(75);
+    font-size: Rem(32);
+    color: #2f0233;
+  }
+  .user-av{
+    height: Rem(55);
+    width: Rem(55);
+    background: pink;
+    border-radius: Rem(60);
+    overflow: hidden;
+    margin: Rem(10);
+    img{
+      width: 100%;
+    }
+  }
+  .user-name{
+
+  }
+  .user-Gold,.user-credit{
+    float: right;
+    height: Rem(75);
+    margin: 0 Rem(10);
+    .icon{
+      height: Rem(65);
+      width:Rem(65);
+      float: left;
+      background: url("../../image/activity/a-gold.png");
+      background-size: contain;
+      margin: Rem(5);
+    }
+  }
+  .user-credit{
+    .icon{
+      background: url("../../image/activity/a-act.png");
+      background-size: contain;
+    }
+  }
+}
+
+.Refresh{
+  position: fixed;
+  height: Rem(100);
+  width: 100%;
+  bottom:0;
+  background: white;
+  color: #2f0233;
+  .fresh-btn,.follow-btn{
+    font-size: Rem(32);
+    height: Rem(50);
+    float: left;
+    line-height: Rem(50);
+    border-radius: Rem(10);
+    border: 1px solid #48214c;
+    padding: 0 0 0 Rem(20);
+    margin-top: Rem(20);
+    margin-left: Rem(20);
+    .icon{
+      height: Rem(40);
+      width: Rem(40);
+      background: url("../../image/activity/refresh.png") no-repeat;
+      float: right;
+      background-size: contain;
+      margin: Rem(5);
+      background-position: center;
+    }
+  }
+  .follow-btn{
+    .icon{
+      background: url("../../image/activity/add.png") no-repeat;
+      background-size: 90%;
+    }
+  }
+  .info{
+    float: right;
+    text-align: right;
+    margin-right: Rem(20);
+    p{
+      line-height: Rem(30);
+      height: Rem(30);
+    }
+    .p-name{
+      height: Rem(50);
+      line-height: Rem(50);
+    }
+  }
+}

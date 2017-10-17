@@ -1,0 +1,48 @@
+@function Rem($now) {
+  @return ($now / 75) + rem;
+}
+#LoginAlert{
+  .alertInput{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(47,2,51,0.9);
+    input{
+      outline: none;
+      border: none;
+      height: Rem(60);
+      width: 75%;
+      font-size: Rem(26);
+    }
+    .getCode{
+      float: right;
+      width: 25%;
+      height: Rem(60);
+      color: #2c1241;
+      background: #00f2ff;
+      font-size: Rem(26);
+      text-align: center;
+      line-height: Rem(60);
+    }
+    .msg{
+      height: Rem(30);
+      line-height: Rem(30);
+      color: #00f2ff;
+      font-weight: 100;
+      font-size: Rem(16);
+    }
+    .input-box{
+      width: 80%;
+      margin: Rem(350) auto;
+      .btn{
+        height: Rem(60);
+        text-align: center;
+        background: #00f2ff;
+        line-height: Rem(60);
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+#title {
+  height: 1.06667rem;
+  background: #ebff00;
+  position: relative; }
+  #title .back-btn {
+    height: 1.06667rem;
+    width: 1.06667rem;
+    background: url("../../image/arrow.png") no-repeat;
+    background-size: 50%;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: rotateZ(90deg); }
+  #title .title-name {
+    text-align: center;
+    line-height: 1.06667rem;
+    font-size: 0.42667rem;
+    font-weight: bold; }
+
+/*# sourceMappingURL=index.css.map */

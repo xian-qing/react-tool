@@ -1,0 +1,30 @@
+@function Rem($now) {
+  @return ($now / 75) + rem;
+}
+.scroll-view{
+  -webkit-overflow-scrolling: touch;
+}
+.scrollIn{
+  position: relative;
+
+  .refresh-text{
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height:50px;
+    overflow: hidden;
+    font-size: 20px;
+    line-height:50px;
+    text-align: center;
+    background: #fafafa;
+  }
+}
+.scrollInRefresh{
+  transition: transform 0.2s;
+}
+.load-more{
+  text-align: center;
+  font-size: 16px;
+  color: #999;
+}

@@ -1,0 +1,41 @@
+@function Rem($now) {
+  @return ($now / 75) + rem;
+}
+.downALert{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: rgba(0,0,0,0.5);
+  left: 0;
+  top: 0;
+  display: none;
+  z-index: 100;
+  .down-alert{
+    width: Rem(500);
+    margin: Rem(300) auto;
+    position: relative;
+    img{
+      width: 100%;
+    }
+    .downALert-back{
+      height: Rem(80);
+      width: Rem(80);
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 10;
+    }
+    .link{
+      height: Rem(200);
+      width: 100%;
+      position: absolute;
+      bottom:0;
+      left: 0;
+    }
+  }
+
+
+}
+.downALert-show{
+    display: block;
+}

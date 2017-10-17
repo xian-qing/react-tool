@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@function Rem($now) {
+  @return ($now / 75) + rem;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+body {
+  color: #2f0233;
+  font-size: Rem(30);
+}
+.share-app{
+  img{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+  }
+  .btn{
+    height: Rem(120);
+    width: Rem(400);
+    line-height: Rem(120);
+    text-align: center;
+    font-size: Rem(40);
+    background: #ebff00;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: Rem(900);
+  }
+}

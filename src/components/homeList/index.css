@@ -1,0 +1,57 @@
+.HomeList {
+  font-size: 0.26667rem; }
+  .HomeList .list {
+    padding: 0.26667rem 0; }
+    .HomeList .list .left {
+      width: 3.33333rem;
+      float: left;
+      background: greenyellow; }
+    .HomeList .list .center {
+      width: 3.33333rem;
+      float: left; }
+      .HomeList .list .center .btn {
+        height: 0.48rem;
+        width: 2.26667rem;
+        background: #ff0059;
+        border-radius: 0.13333rem;
+        margin: 0 auto;
+        text-align: center;
+        color: white; }
+      .HomeList .list .center div {
+        text-align: center; }
+    .HomeList .list .right {
+      width: 3.33333rem;
+      float: left;
+      background: gold; }
+  .HomeList .detail:after {
+    content: '';
+    display: block;
+    clear: both; }
+
+.detail-list {
+  background: #eee; }
+  .detail-list .list {
+    border-bottom: 1px solid white; }
+    .detail-list .list .add-icon {
+      height: 0.6rem;
+      width: 0.6rem;
+      background: url("../../image/add-icon.png") no-repeat;
+      background-size: contain;
+      float: left;
+      margin: 0.2rem; }
+    .detail-list .list .rate {
+      float: left; }
+    .detail-list .list .left {
+      background: none; }
+      .detail-list .list .left .add-icon {
+        margin-left: 0.8rem; }
+    .detail-list .list .right {
+      background: none; }
+      .detail-list .list .right .rate {
+        margin-left: 0.8rem; }
+  .detail-list .list:after {
+    content: '';
+    display: block;
+    clear: both; }
+
+/*# sourceMappingURL=index.css.map */

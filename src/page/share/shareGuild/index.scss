@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@function Rem($now) {
+  @return ($now / 75) +rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  color: #2f0233;
+  font-size: Rem(30);
+  background: rgb(47, 2, 51);
+}
+
+#share {
+  .share-box {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  .share-detail{
+    padding: 0 Rem(54);
+  }
+  .link-img{
+    background: #00ff8b;
+    width: 100%;
+    img{
+      width: 100%;
+    }
+  }
+  .avatar {
+    height: Rem(274);
+    background: url("../../../image/share/guild-avatar.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-top: Rem(70);
+    .img {
+      height: Rem(170);
+      width: Rem(170);
+      margin: 0 auto;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      top: Rem(50);
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .user-name {
+    margin-top: Rem(40);
+    font-size: Rem(36);
+    text-align: center;
+    color: #fff;
+  }
+  .jcwz {
+    width: 100%;
+    margin-top: Rem(50);
+  }
+  .detail {
+    margin-top: Rem(130);
+    background: rgba(0, 255, 139, 0.102);
+    padding: 0 Rem(40);
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .win {
+      height: Rem(85);
+      padding: Rem(35) 0 Rem(40) 0;
+      position: relative;
+      .title {
+        font-weight: bold;
+        font-size: Rem(36);
+        margin-left: Rem(40);
+        color: #00ff8b;
+      }
+      .num {
+        width: Rem(112);
+        height: Rem(140);
+        line-height: Rem(140);
+        font-weight: bold;
+        font-size: Rem(120);
+        color: #2f0233;
+        background: #00ff8b;
+        text-align: center;
+        display: inline-block;
+        vertical-align: text-bottom;
+        margin-top: Rem(-100);
+        margin-left: Rem(30);
+      }
+    }
+    .show-box {
+      width: Rem(260);
+      height: Rem(100);
+      margin: 0 0 Rem(40) 0;
+      line-height: Rem(100);
+      text-align: center;
+      .info {
+        width: Rem(180);
+        background: #2f0233;
+        font-size: Rem(48);
+        color: #00ff8b;
+        overflow: hidden;
+      }
+      .name {
+        width: Rem(80);
+        background: #00ff8b;
+        font-size: Rem(30);
+        color: #2f0233;
+        overflow: hidden;
+      }
+    }
+    .cer {
+      margin-right: Rem(170);
+    }
+    .fl {
+      float: left;
+    }
+    .fr {
+      float: right;
+    }
+  }
+  .content-tit {
+    text-align: center;
+    color: #fff;
+    font-size: Rem(48);
+    margin: Rem(40) 0 Rem(28) 0;
+  }
+  .hr {
+    width: 100%;
+    height: 1px;
+    background: #fff;
+  }
+  .other {
+    margin-top: Rem(42);
+    display: flex;
+    justify-content: space-around;
+    .other-item {
+      width: Rem(130);
+      .other-avatar {
+        width: Rem(130);
+        height: Rem(130);
+        border-radius: 50%;
+        border: Rem(3) solid #00ff8b;
+      }
+      .other-name {
+        margin: Rem(24) 0 Rem(18) 0;
+        font-size: Rem(30);
+        color: #fff;
+      }
+      .gold {
+        font-size: Rem(24);
+        color: #fff;
+        span {
+          color: #00ff8b;
+        }
+      }
+    }
+  }
+  .btn {
+    background: #00ff8b;
+    line-height: Rem(70);
+    height: Rem(70);
+    text-align: center;
+    color: #2f0023;
+    font-size: Rem(30);
+    cursor: pointer;
+    margin: Rem(36) 0;
+  }
+  .downLoad {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: Rem(100);
+    background: #2f0233;
+    border-top: 1px solid #9c849f;
+    left: 0;
+    .btn {
+      height: Rem(60);
+      text-align: center;
+      background: #00ff8b;
+      line-height: Rem(60);
+      width: 90%;
+      margin: Rem(20) auto;
+    }
+  }
+  .alertInput {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(47, 2, 51, 0.9);
+    input {
+      outline: none;
+      border: none;
+      height: Rem(60);
+      width: 75%;
+      font-size: Rem(26);
+      padding-left: Rem(20);
+      box-sizing: border-box;
+    }
+    .getCode {
+      float: right;
+      width: 25%;
+      height: Rem(60);
+      color: #2c1241;
+      background: #00ff8b;
+      font-size: Rem(26);
+      text-align: center;
+      line-height: Rem(60);
+    }
+    .msg {
+      height: Rem(30);
+      line-height: Rem(30);
+      color: #00ff8b;
+      font-weight: 100;
+      font-size: Rem(16);
+    }
+    .input-box {
+      width: 80%;
+      margin: Rem(350) auto;
+      .btn {
+        height: Rem(60);
+        text-align: center;
+        background: #00ff8b;
+        line-height: Rem(60);
+        width: 100%;
+      }
+    }
+  }
+}

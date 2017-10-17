@@ -1,0 +1,569 @@
+@function Rem($now) {
+  @return ($now / 75) + rem;
+}
+a{
+  color: black;
+}
+input{
+  outline: none;
+  border: none;
+}
+.user-info{
+  height: Rem(100);
+  background: #2f0233;
+  position: relative;
+  .user-img{
+    height: Rem(70);
+    width:Rem(70);
+    background: white;
+    border-radius: Rem(70);
+    position: absolute;
+    left: Rem(15);
+    top: Rem(15);
+    //overflow: hidden;
+    img{
+      width: 100%;
+      display: block;
+      border-radius: Rem(70);
+    }
+    span{
+      position: absolute;
+      height: Rem(16);
+      width: Rem(16);
+      right: 0;
+      top: 0;
+      background: red;
+      display: block;
+      border-radius: Rem(70);
+    }
+  }
+  .user-name{
+    height: Rem(100);
+    position: absolute;
+    left: Rem(100);
+    top: 0;
+    width: Rem(220);
+    overflow: hidden;
+    color: white;
+    div{
+      height: Rem(50);
+      font-size: Rem(34);
+    }
+    .name{
+      line-height: Rem(60);
+      overflow: hidden;
+    }
+    .gold{
+      height: Rem(40);
+      line-height: Rem(40);
+      div{
+        float: left;
+        font-size: Rem(28);
+      }
+      .icon{
+        height: Rem(40);
+        width: Rem(40);
+        background: url("../../image/a-gold.png") no-repeat;
+        background-size: cover;
+        background-position: left center;
+      }
+
+    }
+  }
+  .goHome{
+    width: Rem(200);
+    height: Rem(100);
+    margin: 0 auto;
+    display: block;
+  }
+  .logo{
+    //width: Rem(200);
+    height: Rem(100);
+    display: block;
+    margin: 0 auto;
+  }
+  .detail-link{
+    width: Rem(200);
+    height: Rem(100);
+    position: absolute;
+    right: 0;
+    top: 0;
+    a{
+      display: block;
+      float: left;
+    }
+    .shop{
+      width: Rem(65);
+      height: Rem(65);
+      background: url("../../image/shop.png") no-repeat;
+      background-size: contain;
+      margin-top: Rem(25);
+      position: relative;
+      span{
+        position: absolute;
+        height: Rem(16);
+        width: Rem(16);
+        right: Rem(-10);
+        top: Rem(-10);
+        background: red;
+        display: block;
+        border-radius: Rem(70);
+      }
+    }
+    .myCar{
+      width: Rem(65);
+      height: Rem(65);
+      background: url("../../image/mycar.png") no-repeat;
+      background-size: contain;
+      margin-top: Rem(18);
+      margin-left: Rem(35);
+      position: relative;
+      .car-count{
+        position: absolute;
+        right: Rem(-10);
+        top: Rem(-10);
+        background: red;
+        border-radius: Rem(30);
+        color: white;
+        height: Rem(35);
+        width: Rem(35);
+        text-align: center;
+        line-height: Rem(38);
+        font-size: Rem(20);
+      }
+      @keyframes rubberBand {
+        from {
+          transform: scale3d(1, 1, 1);
+        }
+
+        30% {
+          transform: scale3d(1.25, 0.75, 1);
+        }
+
+        40% {
+          transform: scale3d(0.75, 1.25, 1);
+        }
+
+        50% {
+          transform: scale3d(1.15, 0.85, 1);
+        }
+
+        65% {
+          transform: scale3d(.95, 1.05, 1);
+        }
+
+        75% {
+          transform: scale3d(1.05, .95, 1);
+        }
+
+        to {
+          transform: scale3d(1, 1, 1);
+        }
+      }
+
+      .rubberBand {
+        animation-name: rubberBand;
+      }
+      .animated {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+      }
+      .shake {
+        animation-name: shake;
+      }
+    }
+  }
+  .back{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 99;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+  }
+  .back-show{
+    visibility: visible;
+    opacity: 1;
+    ransition: .3s ease;
+  }
+  .login-page{
+    position: fixed;
+    width: Rem(600);
+    height: 100%;
+    left: 0;
+    top:0;
+    background: white;
+    z-index: 100;
+    overflow: scroll;
+    transform: translateX(-100%);
+    transition: transform .3s ease;
+    .no-login{
+      opacity: 1;
+      width: Rem(600);
+      //transition: 0.5s;
+      overflow: hidden;
+      padding-top: Rem(30);
+      text-align: center;
+      line-height: Rem(100);
+      font-size: Rem(32);
+      background: white;
+      .phone-input{
+        input{
+          line-height: Rem(100);
+          height: Rem(100);
+          width: Rem(420);
+          margin: 0 auto;
+          display: block;
+          font-size: Rem(32);
+          //font-weight: 100;
+          border: 1px solid #e2e2e2;
+          border-radius: Rem(10);
+          padding: 0 Rem(20);
+          margin-top: Rem(20);
+        }
+      }
+      .code{
+        width: Rem(460);
+        height: Rem(100);
+        margin: Rem(20) auto;
+        input{
+          line-height: Rem(100);
+          height: Rem(100);
+          width: Rem(200);
+          margin: 0 auto;
+          display: block;
+          font-size: Rem(32);
+          //font-weight: 100;
+          border: 1px solid #e2e2e2;
+          border-radius: Rem(10);
+          padding: 0 Rem(20);
+          float: left;
+        }
+        .code-btn{
+          font-size: Rem(20);
+          float: right;
+          height: Rem(100);
+          width: Rem(170);
+          background: #79f1a4;
+          line-height: Rem(100);
+          border-radius: Rem(10);
+          text-align: center;
+        }
+        .code-btn-ing{
+          background: #acafad;
+          color: white;
+        }
+
+      }
+      .error-msg{
+        text-align: center;
+        color: red;
+        font-size: 12px;
+      }
+      .login-btn{
+        width: Rem(450);
+        height: Rem(100);
+        border-radius: Rem(10);
+        line-height: Rem(100);
+        text-align: center;
+        color: white;
+        background: #2f0233;
+        font-size: Rem(32);
+        margin: 0 auto;
+      }
+      //微信qq登入
+      .login-other{
+        margin-top: Rem(30);
+        .division{
+          width: Rem(425);
+          height: Rem(22);
+          background: url("../../image/fenge.png") no-repeat;
+          background-size: contain;
+          margin: 0 auto;
+        }
+        .btn{
+          width: Rem(425);
+          height: Rem(100);
+          margin: 0 auto;
+          padding: Rem(30) 0;
+          border-bottom: 1px solid #eee;
+          .btn-qq{
+            width: Rem(100);
+            height: Rem(100);
+            float: left;
+            background: url("../../image/qq.png") no-repeat;
+            background-size: contain;
+            margin-left: Rem(80);
+          }
+          .btn-wx{
+            width: Rem(100);
+            height: Rem(100);
+            float: left;
+            background: url("../../image/wxx.png") no-repeat;
+            background-size: contain;
+            margin-left: Rem(100);
+          }
+        }
+        .isNotWx{
+          .btn-wx{
+            display: none;
+          }
+          .btn-qq{
+            margin: 0 auto;
+            float: none;
+          }
+        }
+      }
+    }
+
+    .login-ed{
+      //opacity: 1;
+      width: Rem(600);
+      //transition: 0.5s;
+      overflow: hidden;
+      padding-top: Rem(30);
+      text-align: center;
+      line-height: Rem(100);
+      font-size: Rem(32);
+      background: white;
+      position: relative;
+      .qiutBtn{
+        width: Rem(120);
+        height: Rem(60);
+        background: red;
+        position: absolute;
+        right: Rem(20);
+        top:  Rem(20);
+        background: url("../../image/exit.png") no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+      .setBtn{
+        width: Rem(60);
+        height: Rem(60);
+        background: red;
+        position: absolute;
+        left: Rem(20);
+        top:  Rem(20);
+        background: url("../../image/set.png") no-repeat;
+        background-size: contain;
+      }
+      .avatar{
+        height: Rem(150);
+        width: Rem(150);
+        margin: Rem(40) auto;
+        overflow: hidden;
+        border-radius: Rem(150);
+        opacity: 1;
+        img{
+          width: 100%;
+        }
+      }
+      .name{
+        font-size: Rem(34);
+      }
+      .myMoney{
+        border-top: 1px solid #e7e4e4;
+        border-bottom: 1px solid #e7e4e4;
+        width: Rem(500);
+        margin: 0 auto;
+        .gold,.zuanshi,.jifen{
+          margin: Rem(20) 0;
+          height: Rem(60);
+          div{
+            float: left;
+            line-height: Rem(60);
+          }
+          .icon{
+            height: Rem(60);
+            width: Rem(60);
+            background: url('../../image/gold.png') no-repeat;
+            background-size: contain;
+          }
+          .count{
+            margin-left: Rem(40);
+            font-size: Rem(40);
+            font-weight: bold;
+          }
+          .btn{
+            background: #ebff00;
+            height: Rem(60);
+            width: Rem(150);
+            border-radius: Rem(5);
+            float: right;
+            font-size: Rem(18);
+          }
+        }
+
+        .gold{
+          .icon{
+            background: url('../../image/gold.png') no-repeat;
+            background-size: contain;
+          }
+          .btn{
+            background: #ebff00;
+          }
+
+        }
+        .zuanshi{
+          //margin-top: Rem(20);
+          .icon{
+            background: url('../../image/diamond.png') no-repeat;
+            background-size:contain;
+          }
+          .btn{
+            background: #00ff8b;
+
+          }
+        }
+        .jifen{
+          //margin-top: Rem(20);
+          .icon{
+            background: url('../../image/jifen.png') no-repeat;
+            background-size:contain;
+          }
+          .btn{
+            background: #2f0233;
+            color: #fff;
+          }
+        }
+      }
+      .home,.history,.change,.msg{
+        padding: Rem(20) 0;
+        border-bottom: 1px solid #e7e4e4;
+        width: Rem(500);
+        height: Rem(40);
+        margin: 0 auto;
+        .icon{
+          height: Rem(40);
+          width: Rem(40);
+          float: left;
+          background: url("../../image/history.png") no-repeat;
+          background-size: contain;
+        }
+        .text{
+          line-height: Rem(40);
+          float: left;
+          margin-left: Rem(20);
+        }
+      }
+      .home{
+        .icon{
+          background: url("../../image/home.png") no-repeat;
+          background-size: contain;
+        }
+      }
+      .change{
+        .icon{
+          background: url("../../image/duihuan.png") no-repeat;
+          background-size: contain;
+        }
+      }
+      .msg{
+        .icon{
+          background: url("../../image/msg.png") no-repeat;
+          background-size: contain;
+        }
+      }
+      .no-phone{
+        margin-top: Rem(150);
+        .phone-input{
+          input{
+            line-height: Rem(100);
+            height: Rem(100);
+            width: Rem(420);
+            margin: 0 auto;
+            display: block;
+            font-size: Rem(32);
+            //font-weight: 100;
+            border: 1px solid #e2e2e2;
+            border-radius: Rem(10);
+            padding: 0 Rem(20);
+            margin-top: Rem(20);
+          }
+        }
+        .code{
+          width: Rem(460);
+          height: Rem(100);
+          margin: Rem(20) auto;
+          input{
+            line-height: Rem(100);
+            height: Rem(100);
+            width: Rem(200);
+            margin: 0 auto;
+            display: block;
+            font-size: Rem(32);
+            //font-weight: 100;
+            border: 1px solid #e2e2e2;
+            border-radius: Rem(10);
+            padding: 0 Rem(20);
+            float: left;
+          }
+          .code-btn{
+            font-size: Rem(20);
+            float: right;
+            height: Rem(100);
+            width: Rem(170);
+            background: #79f1a4;
+            line-height: Rem(100);
+            border-radius: Rem(10);
+            text-align: center;
+          }
+          .code-btn-ing{
+            background: #acafad;
+            color: white;
+          }
+
+        }
+        .error-msg{
+          text-align: center;
+          color: red;
+          font-size: 12px;
+        }
+        .login-btn{
+          width: Rem(450);
+          height: Rem(100);
+          border-radius: Rem(10);
+          line-height: Rem(100);
+          text-align: center;
+          color: white;
+          background: #2f0233;
+          font-size: Rem(32);
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .download{
+      img{
+        display: block;
+        margin: 0 auto;
+      }
+      .btn{
+        width: Rem(420);
+        margin-top: Rem(50);
+      }
+      .qrcode{
+        width: Rem(250);
+        margin-top: Rem(50);
+      }
+    }
+  }
+  .login-page-show{
+    transform: translateX(0);
+    transition: transform .3s ease;
+  }
+}
+.login-loading{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: white;
+  text-align: center;
+  font-size: Rem(40);
+  line-height: Rem(500);
+  z-index: 200;
+}

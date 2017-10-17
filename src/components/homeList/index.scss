@@ -1,0 +1,249 @@
+@function Rem($now) {
+  @return ($now / 75) + rem;
+}
+
+.HomeList{
+  font-size: Rem(20);
+  img{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+  .list{
+    //padding: Rem(20) 0;
+    border-bottom: 1px solid #eee;
+    .detail{
+      padding: Rem(20);
+    }
+    .team-name{
+      text-align: center;
+      margin-top: Rem(10);
+    }
+    .left{
+      width:35%;
+      float: left;
+      //background: greenyellow;
+
+    }
+    .center{
+      width: 30%;
+      float: left;
+      .btn{
+        height: Rem(40);
+        line-height: Rem(45);
+        width:Rem(170);
+        margin: 0 auto;
+        text-align: center;
+        color: white;
+        font-weight: 100;
+        margin-top: Rem(0);
+        div{
+          display: none;
+        }
+        .not-start,.ing,.end{
+          display: block;
+          background: #ff0059;
+          border-radius: Rem(5);
+        }
+        .end{
+          background: white;
+          color: #555555;
+          border-radius: Rem(5);
+          border: 1px solid #555555;
+        }
+      }
+      div{
+        text-align: center;
+      }
+      .time,.name{
+        //height: Rem(40);
+        line-height: Rem(40);
+        overflow:hidden;
+      }
+      .name{
+        margin-top: Rem(10);
+      }
+    }
+    .right{
+      width: 35%;
+      float: right;
+      //background: gold;
+    }
+    .show-div{
+      height: Rem(30);
+      width: 100%;
+      clear: both;
+      .rotate-dowm{
+        height: Rem(30);
+        width: Rem(40);
+        margin:0 auto;
+        background: url("../../image/top_03.png") no-repeat;
+        background-size: contain;
+        transform: rotateZ(180deg);
+      }
+      .rotate-top{
+        transform: rotateZ(0);
+      }
+
+    }
+  }
+  .detail{
+    .time{
+      margin-top: Rem(10);
+    }
+  }
+  .detail:after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.detail-list{
+  background: #eee;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  .boNumber{
+    height: Rem(50);
+    background: #ddd;
+    text-align: center;
+    line-height: Rem(50);
+  }
+  .boNumber-hide{
+    height: 0;
+    overflow: hidden;
+  }
+  .list-in{
+    position: relative;
+    border-bottom: 1px solid white;
+    height: Rem(70);
+    padding: Rem(20) 0;
+    overflow: hidden;
+    .boNumber{
+      height: Rem(50);
+      text-align: center;
+      background: #b9b8b8;
+      line-height: Rem(50);
+      margin-bottom: Rem(20);
+    }
+    .add-icon{
+      height: Rem(45);
+      width: Rem(45);
+      background: url("../../image/add-ico.png") no-repeat #ff0059;
+      background-size: 70%;
+      background-position: center;
+      float: left;
+      margin: Rem(15);
+      transform: rotateZ(0deg);
+      transition: 0.3s;
+      border-radius: Rem(50);
+    }
+    .add-icon-add{
+      background: url("../../image/add-ico.png") no-repeat #999;
+      transform: rotateZ(45deg);
+      background-position: center;
+      transition: 0.3s;
+      background-size: 70%;
+      border-radius: Rem(50);
+    }
+    .rate{
+      //float: left;
+      //position: absolute;
+    }
+    .left{
+      background: none;
+      .add-icon{
+        float: right;
+        margin-right: Rem(80);
+      }
+      .rate{
+        float: right;
+        margin-right: Rem(20);
+      }
+    }
+    .right{
+      background: none;
+      .rate{
+        float: left;
+        margin-left: Rem(20);
+      }
+      .add-icon{
+        float: left;
+        margin-left: Rem(80);
+      }
+
+    }
+    .center{
+      .btn{
+        height: Rem(38);
+        line-height: Rem(42);
+        background: #ff0059;
+        border-radius: Rem(5);
+        overflow: hidden;
+      }
+      .btn-off{
+        background: none;
+        border:1px solid #555;
+        color: #555;
+      }
+    }
+    .enter{
+      height: Rem(50);
+      width: Rem(50);
+      background: url("../../image/enter.png") no-repeat ;
+      background-size: 80%;
+      background-position: center;
+      position: absolute;
+      right: Rem(20);
+      top: Rem(32);
+    }
+
+  }
+  .list:after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .win{
+    position: absolute;
+    width: Rem(110);
+    height: Rem(110);
+    background: url("../../image/win.png") no-repeat;
+    background-size: contain;
+    display: none;
+    //left: 0;
+    bottom: 0;
+  }
+  .win-right{
+    right: 0;
+    bottom: 0;
+  }
+  .list-end{
+    .add-icon{
+      display: none;
+    }
+  }
+  .game-end{
+    .win{
+      display: block;
+    }
+    .add-icon{
+      display: none;
+    }
+  }
+}
+.show{
+  height: auto;
+  transition: 0.5s;
+}
+.addAnimatedDiv{
+  position: fixed;
+  height: 20px;
+  width: 20px;
+  background: #eee;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  transition: all 2s;
+}

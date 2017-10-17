@@ -1,0 +1,131 @@
+@function Rem($now) {
+  @return ($now / 75) + rem;
+}
+.AlertLogin{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background: rgba(0,0,0,0.4);
+  .no-login{
+    width: Rem(500);
+    overflow: hidden;
+    padding-top: Rem(30);
+    text-align: center;
+    line-height: Rem(100);
+    font-size: Rem(32);
+    background: white;
+    border-radius: Rem(10);
+    margin: Rem(300) auto;
+    .phone-input{
+      input{
+        line-height: Rem(100);
+        height: Rem(100);
+        width: Rem(420);
+        margin: 0 auto;
+        display: block;
+        font-size: Rem(32);
+        //font-weight: 100;
+        border: 1px solid #e2e2e2;
+        border-radius: Rem(10);
+        padding: 0 Rem(20);
+        margin-top: Rem(20);
+      }
+    }
+    .code{
+      width: Rem(460);
+      height: Rem(100);
+      margin: Rem(20) auto;
+      input{
+        line-height: Rem(100);
+        height: Rem(100);
+        width: Rem(200);
+        margin: 0 auto;
+        display: block;
+        font-size: Rem(32);
+        //font-weight: 100;
+        border: 1px solid #e2e2e2;
+        border-radius: Rem(10);
+        padding: 0 Rem(20);
+        float: left;
+      }
+      .code-btn{
+        font-size: Rem(20);
+        float: right;
+        height: Rem(100);
+        width: Rem(170);
+        background: #79f1a4;
+        line-height: Rem(100);
+        border-radius: Rem(10);
+        text-align: center;
+      }
+      .code-btn-ing{
+        background: #acafad;
+        color: white;
+      }
+
+    }
+    .error-msg{
+      text-align: center;
+      color: red;
+      font-size: 12px;
+    }
+    .login-btn{
+      width: Rem(450);
+      height: Rem(100);
+      border-radius: Rem(10);
+      line-height: Rem(100);
+      text-align: center;
+      color: white;
+      background: #2f0233;
+      font-size: Rem(32);
+      margin: 0 auto;
+    }
+    //微信qq登入
+    .login-other{
+      margin-top: Rem(30);
+      .division{
+        width: Rem(425);
+        height: Rem(22);
+        background: url("../../image/fenge.png") no-repeat;
+        background-size: contain;
+        margin: 0 auto;
+      }
+      .btn{
+        width: Rem(425);
+        height: Rem(100);
+        margin: 0 auto;
+        padding: Rem(30) 0;
+        border-bottom: 1px solid #eee;
+        .btn-qq{
+          width: Rem(100);
+          height: Rem(100);
+          float: left;
+          background: url("../../image/qq.png") no-repeat;
+          background-size: contain;
+          margin-left: Rem(80);
+        }
+        .btn-wx{
+          width: Rem(100);
+          height: Rem(100);
+          float: left;
+          background: url("../../image/wxx.png") no-repeat;
+          background-size: contain;
+          margin-left: Rem(100);
+        }
+      }
+      .isNotWx{
+        .btn-wx{
+          display: none;
+        }
+        .btn-qq{
+          margin: 0 auto;
+          float: none;
+        }
+      }
+    }
+  }
+}
+.AlertLogin-hide{
+  display: none;
+}

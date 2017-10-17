@@ -1,0 +1,34 @@
+@function Rem($now) {
+  @return ($now / 75) + rem;
+}
+.myAlert{
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.3);
+  position: fixed;
+  z-index: 100;
+  display: none;
+  text-align: center;
+  top: 0;
+  left: 0;
+  color: black;
+  .content{
+    padding: Rem(20);
+    width: Rem(500);
+    background: white;
+    line-height: Rem(100);
+    margin: Rem(350) auto;
+    border-radius: Rem(10);
+    font-size: Rem(34);
+    .close-btn{
+      height: Rem(50);
+      line-height: Rem(50);
+      border-top: 1px solid #eee;
+      padding-top: Rem(20);
+    }
+  }
+
+}
+.myAlert-show{
+  display: block;
+}

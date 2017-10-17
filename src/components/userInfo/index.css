@@ -1,0 +1,45 @@
+.user-info {
+  height: 1.33333rem;
+  background: #2f0233; }
+  .user-info .user-img {
+    height: 0.93333rem;
+    width: 0.93333rem;
+    background: #e2e2e2;
+    border-radius: 0.93333rem;
+    float: left;
+    margin: 0.2rem; }
+  .user-info .logo {
+    width: 5.33333rem;
+    float: left; }
+  .user-info .detail {
+    width: 2.66667rem;
+    height: 1.33333rem;
+    float: right; }
+    .user-info .detail img {
+      width: 0.66667rem;
+      margin: 0.26667rem; }
+    .user-info .detail .shop {
+      width: 0.86667rem; }
+  .user-info .login-page {
+    position: fixed;
+    width: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    overflow: hidden;
+    transition: 0.5s; }
+    .user-info .login-page .login {
+      width: 0;
+      height: 100%;
+      background: white;
+      transition: 0.5s; }
+  .user-info .login-page-show {
+    width: 100%;
+    transition: 0.5s; }
+    .user-info .login-page-show .login {
+      width: 6.66667rem;
+      transition: 0.5s; }
+
+/*# sourceMappingURL=index.css.map */

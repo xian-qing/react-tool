@@ -1,0 +1,400 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@function Rem($now) {
+  @return ($now / 75) + rem;
+}
+
+body {
+  //background: white;
+  font-size: Rem(24);
+}
+
+.guild {
+  padding: Rem(30) 0;
+  background: #00ff8b;
+  .img {
+    width: Rem(100);
+    height: Rem(100);
+    background: #eee;
+    float: left;
+    margin-left: Rem(30);
+    border-radius: Rem(100);
+    img{
+      width: 100%;
+    }
+  }
+  .detail {
+    float: left;
+    margin-left: Rem(30);
+    line-height: Rem(50);
+    .title{
+      font-weight: bold;
+      font-size: Rem(35);
+    }
+  }
+}
+
+.guild:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.select{
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: Rem(-60);
+  top: calc(50% - 10px);
+  border-radius: 20px;
+  border: 1px solid #c7c4c4;
+}
+.select-active{
+  background: url("../../image/select.png") no-repeat #ff0059;
+  background-size: contain;
+  border: 1px solid #ff0059;
+}
+/*结算单*/
+.settlement{
+  .title{
+    height: Rem(85);
+    background: #00eeee;
+    font-weight: bold;
+    text-align: center;
+    line-height: Rem(85);
+  }
+  /*.list{
+    position: relative;
+    padding-top: Rem(60);
+    padding-bottom: Rem(50);
+    border-bottom: 1px solid #bcbcbc;
+    .close{
+      width: Rem(45);
+      height: Rem(45);
+      background: url("../image/close.png") #38003d no-repeat;
+      background-size: 70%;
+      background-position: center;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    div{
+      text-align: center;
+      margin-bottom: Rem(10);
+    }
+    .name{
+      font-size: Rem(24);
+    }
+    .rote{
+      font-size: Rem(24);
+      .winText{
+        font-weight: bold;
+        font-size: Rem(30);
+      }
+    }
+    .input{
+      color: #bcbcbc;
+      font-size: Rem(40);
+      input{
+        width: Rem(250);
+        height: Rem(50);
+        border: 1px solid #bcbcbc;
+        outline: none;
+        color: #bcbcbc;
+        margin-right: Rem(8);
+        text-align: center;
+        font-size: Rem(32);
+      }
+    }
+    .win{
+      font-size: Rem(30);
+      color: #320636;
+    }
+  }*/
+  .settlementList{
+    padding-bottom: Rem(200);
+  }
+  .gold-icon{
+    height: Rem(50);
+    width: Rem(40);
+    float: left;
+    background: url("../../image/a-gold.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+  }
+  .aGame{
+    padding: 0 Rem(20) 0 Rem(80);
+    .game-detail{
+      line-height: Rem(80);
+      position: relative;
+      .logo{
+        width: 100px;
+        height: Rem(80);
+        overflow: hidden;
+        float: left;
+        img{
+          width: Rem(50);
+          vertical-align: middle;
+        }
+      }
+      .name{
+        text-align: center;
+      }
+      .time{
+        float: right;
+        color: #c2c2c2;
+      }
+      span{
+        line-height: Rem(80);
+        width: Rem(300);
+        height: Rem(80);
+        display: block;
+        overflow: scroll;
+        white-space: nowrap;
+      }
+    }
+    .list{
+      background: #f5f5f5;
+      margin-bottom: 1px;
+      padding: Rem(20);
+      position: relative;
+      .close{
+        height: Rem(40);
+        width: Rem(40);
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: #d2d2d2;
+        background: url("../../image/close1.png") no-repeat #d2d2d2;
+        background-size: contain;
+      }
+      .name{
+        font-size: Rem(28);
+      }
+      .gameWin{
+        line-height: Rem(50);
+      }
+      &:after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+      .profit{
+        >div{
+          float: left;
+          width: 33%;
+          height: Rem(50);
+          position: relative;
+          line-height: Rem(50);
+        }
+        .text-center{
+          text-align: center;
+        }
+        .text-right{
+          text-align: right;
+        }
+        .color{
+          color: #bebebe;
+        }
+        .input{
+          height: Rem(40);
+          width: 80%;
+          position: relative;
+          input{
+            width: 70%;
+            height: Rem(50);
+            line-height: Rem(50);
+            border: none;
+            outline: none;
+            float: left;
+            padding-left: Rem(50);
+          }
+        }
+        .input-get{
+          position: absolute;
+          right: 0;
+          .get{
+            padding-left: Rem(50);
+          }
+        }
+      }
+    }
+    .guardian{
+      height: Rem(60);
+      padding: Rem(20) 0;
+      >div{
+        float: left;
+      }
+      .aGame-total{
+        padding-left: Rem(50);
+        line-height: Rem(50);
+      }
+      .btn{
+        float: right;
+        height: Rem(60);
+        width: Rem(170);
+        background: #00ff8b;
+        color: #2c1339;
+        text-align: center;
+        line-height: Rem(60);
+        border-radius: 3px;
+      }
+
+    }
+  }
+
+
+
+
+}
+
+.Total{
+  color: #340838;
+  padding: 2%;
+  position: fixed;
+  bottom: 0;
+  background: white;
+  width: 96%;
+  .right-span{
+    float: right;
+  }
+  .total{
+    font-size: Rem(36);
+    font-weight: bold;
+  }
+  .total-bets{
+    font-weight: bold;
+    margin-top: Rem(10);
+  }
+  .total-expect{
+    font-weight: bold;
+    margin-top: Rem(10);
+  }
+  .handle{
+    margin-bottom: Rem(10);
+    border-bottom: 1px solid #eee;
+    padding: Rem(10) 0;
+    &:after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+    >div{
+      float: right;
+      line-height: Rem(50);
+    }
+    .btn{
+      float: right;
+      height: Rem(60);
+      width: Rem(170);
+      background: #ff0059;
+      color: #fff;
+      text-align: center;
+      line-height: Rem(60);
+      border-radius: 3px;
+    }
+    .all{
+      margin-right: Rem(50);
+      .aGame-total{
+        padding-left: Rem(50);
+        font-size: Rem(30);
+        font-weight: bold;
+      }
+    }
+    .all-select{
+      float: left;
+      position: relative;
+      left: Rem(65);
+    }
+  }
+  .clear-go{
+    &:after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .clear{
+      float: left;
+      height: Rem(70);
+      //width: Rem(170);
+      line-height: Rem(70);
+      padding-left: Rem(50);
+      background: url("../../image/trash.png") no-repeat ;
+      background-size: 40%;
+      background-position: left;
+      margin-left: Rem(10);
+    }
+    .friendPay{
+      float: right;
+      height: Rem(60);
+      width: Rem(170);
+      background: #00ff8b;
+      color: #2c1339;
+      text-align: center;
+      line-height: Rem(60);
+      border-radius: 3px;
+    }
+    .btn{
+      height: Rem(70);
+      text-align: center;
+      line-height: Rem(70);
+      float: right;
+      color:  #ff0059;
+      margin-right: Rem(29);
+      span{
+        text-decoration: underline;
+      }
+    }
+  }
+  .total-handle:after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+.tip{
+  padding: Rem(50) 0;
+  text-align: center;
+  p{
+    font-size: Rem(12);
+    color: #ff1d6c;
+    padding-left: Rem(10);
+    line-height: Rem(60);
+    //height: Rem(60);
+  }
+  .btn{
+    height: Rem(70);
+    width: Rem(170);
+    background: #ebff00;
+    text-align: center;
+    line-height: Rem(70);
+    float: right;
+    margin-right: Rem(20);
+  }
+  padding-bottom: Rem(100);
+}
+.alert-layer{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 100;
+  color: white;
+  font-size: Rem(40);
+  text-align: center;
+  line-height: Rem(400);
+  display: none;
+}
+.alert-layer-show{
+  display: block;
+  overflow: hidden;
+  img{
+    width: 100%;
+  }
+}
